@@ -29,7 +29,7 @@
 
 
     <!--功能選擇區-->
-    <section>
+    <section class="first-section">
         <div class="container">
             <div class="row">
                 <div class="col-12 section-card ">
@@ -41,7 +41,7 @@
     </section>
 
     <!--參數調整區-->
-    <section>
+    <section >
         <div class="container">
             <div class="row">
                 <div class="col-12 section-card ">
@@ -80,7 +80,7 @@
 
                             <div class="col-6">
                                 <div class="parametersInput-inputWrap">
-                                    <input type="text" class="parametersInput-input form-control" id = 'parametersApiKey' placeholder="請輸入回傳筆數限制 (數字)">
+                                    <input type="number" class="parametersInput-input form-control" id = 'parametersApiKey' placeholder="請輸入回傳筆數限制 (數字)">
                                 </div>
                             </div>
                             
@@ -102,7 +102,7 @@
 
                             <div class="col-6">
                                 <div class="parametersInput-inputWrap">
-                                    <input type="text" class="parametersInput-input form-control" id = 'parametersApiKey' placeholder="請輸入起始回傳筆數 (數字，起始為1)">
+                                    <input type="number" class="parametersInput-input form-control" id = 'parametersApiKey' placeholder="請輸入起始回傳筆數 (數字，起始為0)">
                                 </div>
                             </div>
                             
@@ -234,7 +234,7 @@
                         </div>                          
 
                         <div class="row justify-content-center" >
-                            <button class=" btn btn-primary col-1">送出 </button>
+                            <button class=" btn btn-primary col-2">送出 </button>
                         </div>
                         
                     </form>
@@ -249,6 +249,300 @@
             <div class="row">
                 <div class="col-12 section-card">
                     <h3>數據展示區</h3>
+                    <div class="sub-title">
+                        <p class="mb-4">展示資料種類：月平均-地面測站資料</p>
+                    </div>
+
+                    <div class="data-form">
+                        <p class="mb-4">原始資料 (單一測站、多月份、多要素)</p>
+                        <div class="d-flex justify-content-between mb-4 ">
+                            <p>站名：板橋 (466880)</p>
+                            <p>署屬有人氣象站</p>
+                            <p>起始年份：2002</p>
+                            <p>結束年份：2020</p>
+                        </div>
+                        
+                        <div class="table-wrapper mb-4">
+                            <table class="table taable-secomdary table-striped table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>天氣要素</th>
+                                        <th>物理量</th>
+                                        <th>1 月</th>
+                                        <th>2 月</th>
+                                        <th>3 月</th>
+                                        <th>4 月</th>
+                                        <th>5 月</th>
+                                        <th>6 月</th>
+                                        <th>7 月</th>
+                                        <th>8 月</th>
+                                        <th>9 月</th>
+                                        <th>10 月</th>
+                                        <th>11 月</th>
+                                        <th>12 月</th>     
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>氣壓</td>
+                                        <td>平均值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>氣溫</td>
+                                        <td>maxGE30Days</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    
+                                    <tr>
+                                        <td>氣溫</td>
+                                        <td>meanGE25Days</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>氣溫</td>
+                                        <td>minLE10Days</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>氣溫</td>
+                                        <td>平均值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>氣溫</td>
+                                        <td>最大值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>氣溫</td>
+                                        <td>最小值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>雲量</td>
+                                        <td>平均值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>日照時數</td>
+                                        <td>平均值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>降雨量</td>
+                                        <td>累積</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>降雨量</td>
+                                        <td>GE01Days</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>風速</td>
+                                        <td>平均值</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                        <td>1019.9</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="data-visual">
+                        <p class="mb-4">統計圖</p>
+
+                        <div class="visual-statistic-group">
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    氣壓(平均值)
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    氣溫(平均值)
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    雲量(平均值)
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    日照時數(平均值)
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    降雨量(累積)
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    風速(平均值)
+                                </label>
+                            </div>
+
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>

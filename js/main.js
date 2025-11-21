@@ -85,4 +85,4 @@ async function apiGetWeatherC_B0027_001({Authorization, limit, offset, format, S
     
 };
 
-apiGetWeatherC_B0027_001({Authorization, limit, offset, format, StationID, weatherElement, Month});
+//apiGetWeatherC_B0027_001({Authorization, limit, offset, format, StationID, weatherElement, Month});
