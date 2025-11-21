@@ -1,0 +1,41 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: rgb(55, 54, 54);
+}
+nav {
+    background-color: aquamarine;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+nav, section {
+    margin-bottom: 36px;
+}
+
+h1{
+    font-size: 1.2em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+
+
+.section-card {
+    padding: 24px;
+    background-color: rgb(226, 225, 225);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
