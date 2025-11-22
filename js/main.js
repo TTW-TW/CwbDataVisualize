@@ -1,7 +1,24 @@
 
+/** 串接邏輯 ⏳✅
+ * 1. 監聽 submit ：取得使用者填寫資訊
+ * 2. 取得氣象資料並存為物件 api ✅ apiGetWeatherC_B0027_001; 返還：原始資料
+ * 3. 渲染表格
+ *      渲染文字資料
+ *      渲染表頭
+ *      渲染物理量
+ * 
+ * 4. 監聽 change：取得使用者選擇的物理量
+ * 5. 篩選並組成c3統計圖所需資料  ⏳ produceChartData (apiReturnData)
+ * 6. 產製逐月折線圖  ✅ createLineChart(chartData)
+ * 
+ */
+// console.log(global_cb0027_offset2)
+
 // 全域變數
 const apiBase = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/';
 const apiKey = 'CWA-1F336FE0-2035-4D89-8AB5-133F39AC2235';
+let apiReturnData ; // 儲存當次 api 返還的完整資料
+let chartGraphic; // 把圖表擺在全域變數，可控制載入 or 純陣列更新
 
 // 錯誤訊息吐司參數
 const Toast = Swal.mixin({
@@ -27,6 +44,7 @@ let weatherElement = null;
 
 
 // 串接 C-B0027-001 月平均-地面測站資料
+// api ： 取得氣象資料並存為物件 api
 async function apiGetWeatherC_B0027_001({Authorization, limit, offset, format, StationID, weatherElement, Month}){
     const apiCode = 'C-B0027-001/';
     //const apiUrlRequired = apiBase +  apiCode + '?Authorization=' + apiKey;
@@ -86,3 +104,46 @@ async function apiGetWeatherC_B0027_001({Authorization, limit, offset, format, S
 };
 
 //apiGetWeatherC_B0027_001({Authorization, limit, offset, format, StationID, weatherElement, Month});
+
+
+// 產製逐月折線圖
+
+function createLineChart(chartData){
+
+    if (!chartGraphic){
+        // 如果是新載入網頁，chart還未被定義，才使用c3.generate生成
+            chartGraphic = c3.generate({
+            bindto: '#chartData',
+            data: {
+                columns: [
+                    ['data1', 30, 200, 100, 400, 150, 250 , 30, 200, 100, 400, 150, 250] 
+                ]
+            },
+            axis: {
+                x: {
+                    //show: true,
+                    type: 'category',
+                    categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                }
+            }
+        });
+    } else {
+        // 如果chart已經生成，那只需要chart.load更新資料(減少效能))
+        chartGraphic.load({
+            columns:  ['data1', 30, 200, 100, 400, 150, 250 , 30, 200, 100, 400, 150, 250] , // 更新成新的數據
+            unload: true // 因為數據來源變了，要卸卸載的數據
+        });
+    };
+};
+
+/** =====主程式 + 初始化======= */
+(async function() {
+
+    //  api ： 取得氣象資料並存為物件 api
+    // await apiGetWeatherC_B0027_001({Authorization, limit, offset, format, StationID, weatherElement, Month});  // api：取得訂單列表 + 前端渲染
+
+    createLineChart(chartData); // 產製逐月折線圖
+
+
+
+})();
